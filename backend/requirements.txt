@@ -1,0 +1,13 @@
+axios
+bcrypt
+body-parser
+cors
+dotenv
+express
+jsonwebtoken
+multer
+mysql2
+node-cron
+node-machine-id
+twilio
+xlsx
