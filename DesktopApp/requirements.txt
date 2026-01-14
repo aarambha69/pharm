@@ -1,0 +1,12 @@
+customtkinter==5.2.2
+Pillow==10.3.0
+requests==2.31.0
+mysql-connector-python==8.3.0
+pyinstaller==6.5.0
+py-machine-id==0.1.0
+python-dotenv==1.0.1
+nepali-datetime
+tkcalendar
+charset-normalizer==2.1.1
+pandas
+openpyxl

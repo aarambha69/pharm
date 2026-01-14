@@ -1,0 +1,14 @@
+CREATE TABLE `device_activations` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `machine_id` varchar(255) NOT NULL,
+  `user_role` enum('SUPER_ADMIN','ADMIN','CASHIER') NOT NULL,
+  `client_id` int DEFAULT NULL,
+  `activated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `activated_by` varchar(100) DEFAULT NULL,
+  `is_permanent` tinyint(1) DEFAULT '0',
+  `status` enum('active','suspended','revoked') DEFAULT 'active',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `machine_id` (`machine_id`),
+  KEY `client_id` (`client_id`),
+  CONSTRAINT `device_activations_ibfk_1` FOREIGN KEY (`client_id`) REFERENCES `clients` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
